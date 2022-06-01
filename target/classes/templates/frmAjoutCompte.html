@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security" layout:decorator="template1">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Ma banque</title>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div layout:fragment="content">
+			<section>
+				<form th:action="@{/ajoutClient}" method="post" >
+					<div class="form-group">
+					<div class="col-9">
+						<label>Nom</label>
+						<input type="text" name="nom">
+					</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Email</label>
+						<input type="text" name="email">
+					</div>
+					<div class="form-group">
+						<button type="submit">Enregistrer</button>
+					</div>
+					
+				</form>
+			</section>
+		</div>
+	</div>
+</body>
+</html>
